@@ -45,7 +45,7 @@
           <a href="#faq" class="sidebar__link" id="sidebar-faq">Частые вопросы</a>
           <a href="#" class="sidebar__link">Меню КБЖУ</a>
           <a href="#loyalty" class="sidebar__link">Программа лояльности</a>
-          <a href="#delivery-info-section" class="sidebar__link">Доставка и самовывоз</a>
+          <a href="#" class="sidebar__link" id="sidebar-delivery">Доставка и самовывоз</a>
         </nav>
       </div>
       <div class="sidebar__section">
@@ -138,35 +138,6 @@
     <button class="back-widget" id="back-widget" aria-label="Наверх">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="#1C1C1C"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
     </button>
-
-    <!-- DELIVERY & PICKUP INFO -->
-    <section class="info-section" id="delivery-info-section">
-      <div class="info-section__inner">
-        <h2 class="info-section__title">Доставка и самовывоз</h2>
-        <div class="info-section__grid">
-          <div class="info-card">
-            <div class="info-card__icon">🚗</div>
-            <h3 class="info-card__title">Доставка курьером</h3>
-            <ul class="info-card__list">
-              <li>Минимальный заказ: 1 199 ₽</li>
-              <li>Стоимость доставки: 149 ₽</li>
-              <li>Время доставки: 60 минут</li>
-              <li>Оплата: карта, СберPay, бонусы</li>
-            </ul>
-          </div>
-          <div class="info-card">
-            <div class="info-card__icon">🏪</div>
-            <h3 class="info-card__title">Самовывоз</h3>
-            <ul class="info-card__list">
-              <li>Бесплатно</li>
-              <li>Время подготовки: 20 минут</li>
-              <li>Адрес: проспект Ленина, 113</li>
-              <li>Оплата: карта, СберPay, бонусы</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- LOYALTY -->
     <section class="loyalty" id="loyalty">
@@ -274,6 +245,31 @@
       </button>
     </div>
     <div class="sidebar-basket__items" id="basket-items"></div>
+    <div class="sidebar-basket__delivery">
+      <h3 class="sidebar-basket__delivery-title">Доставка и самовывоз</h3>
+      <div class="sidebar-basket__delivery-grid">
+        <div class="sidebar-basket__delivery-card">
+          <div class="sidebar-basket__delivery-icon">🚗</div>
+          <h4 class="sidebar-basket__delivery-card-title">Доставка курьером</h4>
+          <ul class="sidebar-basket__delivery-list">
+            <li>Минимальный заказ: 1 199 ₽</li>
+            <li>Стоимость доставки: 149 ₽</li>
+            <li>Время доставки: 60 минут</li>
+            <li>Оплата: карта, СберPay, бонусы</li>
+          </ul>
+        </div>
+        <div class="sidebar-basket__delivery-card">
+          <div class="sidebar-basket__delivery-icon">🏪</div>
+          <h4 class="sidebar-basket__delivery-card-title">Самовывоз</h4>
+          <ul class="sidebar-basket__delivery-list">
+            <li>Бесплатно</li>
+            <li>Время подготовки: 20 минут</li>
+            <li>Адрес: проспект Ленина, 113</li>
+            <li>Оплата: карта, СберPay, бонусы</li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <div class="sidebar-basket__footer">
       <div class="sidebar-basket__promo">
         <input type="text" class="sidebar-basket__promo-input" placeholder="Промокод" id="promo-input">

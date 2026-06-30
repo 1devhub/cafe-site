@@ -67,6 +67,13 @@
     setTimeout(() => document.getElementById('faq').scrollIntoView({ behavior: 'smooth' }), 300);
   });
 
+  // Sidebar Delivery link — opens basket
+  document.getElementById('sidebar-delivery').addEventListener('click', (e) => {
+    e.preventDefault();
+    closeSidebar();
+    setTimeout(() => openBasket(), 300);
+  });
+
   // ===== BANNER CAROUSEL =====
   function renderBanners() {
     bannerTrack.innerHTML = BANNERS.map((b, i) => `
