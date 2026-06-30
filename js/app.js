@@ -75,20 +75,11 @@
   });
 
   // Delivery/Pickup tabs
-  const tabsContainer = document.querySelector('.sidebar-basket__tabs');
   const tabs = document.querySelectorAll('.sidebar-basket__tab');
-  const panels = document.querySelectorAll('.sidebar-basket__tab-panel');
-
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
-      const target = tab.dataset.tab;
       tabs.forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
-      tabsContainer.dataset.active = target;
-      panels.forEach(p => {
-        p.classList.remove('active');
-        if (p.dataset.panel === target) p.classList.add('active');
-      });
     });
   });
 
