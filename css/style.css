@@ -589,29 +589,6 @@ body.basket-open .header {
   display: flex; align-items: center; justify-content: center;
 }
 
-/* ===== INFO SECTION ===== */
-.info-section { background: #f8f6f4; padding: 60px 16px; }
-.info-section__inner { max-width: var(--max-width); margin: 0 auto; }
-.info-section__title {
-  font-size: var(--h2-size); font-weight: 700; text-align: center; margin-bottom: 32px;
-}
-.info-section__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-.info-card {
-  background: #fff; border-radius: var(--radius-card); padding: 32px;
-  box-shadow: var(--shadow-card);
-}
-.info-card__icon { font-size: 40px; margin-bottom: 16px; }
-.info-card__title { font-size: 18px; font-weight: 700; margin-bottom: 16px; }
-.info-card__list { display: flex; flex-direction: column; gap: 8px; }
-.info-card__list li {
-  font-size: 14px; color: var(--text-secondary); padding-left: 16px;
-  position: relative;
-}
-.info-card__list li::before {
-  content: ''; position: absolute; left: 0; top: 8px;
-  width: 6px; height: 6px; border-radius: 50%; background: var(--interactive-primary);
-}
-
 /* ===== LOYALTY ===== */
 .loyalty { background: #2C2220; color: var(--text-inverse); padding: 60px 16px; }
 .loyalty__inner { max-width: var(--max-width); margin: 0 auto; text-align: center; }
@@ -749,7 +726,6 @@ body.basket-open .header {
   .basket-float__label { font-size: 8px; }
   .basket-float__price { font-size: 11px; }
   .back-widget { bottom: 16px; left: 16px; }
-  .info-section__grid { grid-template-columns: 1fr; }
   .loyalty__grid { grid-template-columns: repeat(2, 1fr); }
   .app-banner { flex-direction: column; text-align: center; gap: 20px; }
   .app-banner__features { justify-content: center; flex-wrap: wrap; }
