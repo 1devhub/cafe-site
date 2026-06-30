@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+  <title>Кафе — Доставка еды</title>
+  <meta name="description" content="Заказать доставку еды на дом или в офис. Широкий выбор вкусных блюд из свежих продуктов.">
+  <meta property="og:title" content="Кафе — Доставка еды">
+  <meta property="og:description" content="Заказать доставку еды на дом или в офис.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- SIDEBAR OVERLAY (outside page-wrapper) -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <!-- SIDEBAR MENU (outside page-wrapper, slides from LEFT) -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar__header">
+      <div class="sidebar__logo">Кафе</div>
+      <button class="sidebar__close" id="sidebar-close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(28,28,28,0.6)" stroke-width="1.8" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="sidebar__content">
+      <div class="sidebar__section">
+        <div class="sidebar__address">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#C38C7F"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <div>
+            <div class="sidebar__address-text">проспект Ленина, 113</div>
+            <div class="sidebar__address-time">Сегодня: 9:00 – 21:00</div>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar__section">
+        <div class="sidebar__section-title">Меню</div>
+        <nav class="sidebar__nav" id="sidebar-categories"></nav>
+      </div>
+      <div class="sidebar__section">
+        <div class="sidebar__section-title">Информация</div>
+        <nav class="sidebar__nav">
+          <a href="#faq" class="sidebar__link" id="sidebar-faq">Частые вопросы</a>
+          <a href="#" class="sidebar__link">Меню КБЖУ</a>
+          <a href="#loyalty" class="sidebar__link">Программа лояльности</a>
+          <a href="#delivery-info-section" class="sidebar__link">Доставка и самовывоз</a>
+        </nav>
+      </div>
+      <div class="sidebar__section">
+        <div class="sidebar__section-title">Контакты</div>
+        <a href="tel:+79663880008" class="sidebar__phone">+7 (966) 388-00-08</a>
+        <div class="sidebar__socials">
+          <a href="https://t.me/zdrastecafe" class="sidebar__social" aria-label="Telegram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#1C1C1C"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
+          </a>
+          <a href="https://vk.com/zdrastecoffeebar" class="sidebar__social" aria-label="VK">
+            <svg width="20" height="20" viewBox="0 0 32 32" fill="#1C1C1C"><path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.408 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.864-.525-2.05-1.727-1.033-1-1.49-1.135-1.744-1.135-.356 0-.458.102-.458.593v1.575c0 .424-.135.678-1.253.678-1.846 0-3.896-1.12-5.335-3.202-2.168-3.06-2.763-5.335-2.763-5.814 0-.254.102-.491.593-.491h1.744c.44 0 .61.203.78.678.864 2.5 2.303 4.686 2.896 4.896.22 0 .322-.102.322-.66V9.721c-.068-1.186-.695-1.287-.695-1.71 0-.204.17-.407.44-.407h2.744c.373 0 .508.203.508.644v3.473c0 .372.17.508.271.508.22 0 .407-.136.813-.542 1.253-1.405 2.15-3.574 2.15-3.574.119-.254.322-.491.763-.491h1.744c.525 0 .644.27.525.644-.22 1.017-2.354 4.031-2.354 4.031-.186.305-.254.44 0 .78.186.254.796.78 1.203 1.253.745.847 1.32 1.558 1.473 2.05.17.49-.085.744-.576.744z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- HEADER (outside page-wrapper, shifts independently) -->
+  <header class="header" id="header">
+    <nav class="header__nav">
+      <div class="header__side header__side--left">
+        <button class="header__burger" id="burger-btn" aria-label="Меню">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+      <a href="/" class="header__logo-bar">
+        <div class="header__logo-text">Кафе</div>
+      </a>
+      <div class="header__side header__side--right">
+        <button class="header__user" id="login-btn" aria-label="Войти">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v2h20v-2c0-3.3-6.7-5-10-5z"/></svg>
+        </button>
+        <button class="header__basket" id="header-cart-btn" aria-label="Корзина">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+          <span class="header__basket-count" id="header-cart-count">0</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ========== PAGE WRAPPER (shifts left when basket opens) ========== -->
+  <div class="page-wrapper" id="page-wrapper">
+
+    <!-- HERO IMAGE -->
+    <section class="hero" id="hero">
+      <div class="hero__image">
+        <img src="https://cdn.sanity.io/images/cw828sie/production/d07b1c2f6323f7692c791d71188a2cfcb305abe3-4320x1320.jpg" alt="Кафе" loading="eager">
+      </div>
+    </section>
+
+    <!-- MAIN BANNERS -->
+    <section class="main-banners" id="main-banners">
+      <div class="main-banners__inner">
+        <div class="main-banners__track" id="banner-track"></div>
+        <button class="main-banners__btn main-banners__btn--prev" id="banner-prev">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="rgba(28,28,28,0.6)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="10 12 6 8 10 4"/></svg>
+        </button>
+        <button class="main-banners__btn main-banners__btn--next" id="banner-next">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="rgba(28,28,28,0.6)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="transform:rotate(180deg)"><polyline points="10 12 6 8 10 4"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <div class="categories" id="categories">
+      <div class="categories__inner">
+        <div class="categories__list" id="categories-list"></div>
+        <div class="categories__gradient categories__gradient--left"></div>
+        <div class="categories__gradient categories__gradient--right"></div>
+      </div>
+    </div>
+
+    <!-- CATALOG -->
+    <main class="layout" id="layout">
+      <div class="layout__container" id="catalog"></div>
+    </main>
+
+    <!-- FLOATING BASKET BUTTON -->
+    <div class="basket-float" id="basket-float">
+      <div class="basket-float__icon">
+        <svg width="22" height="22" viewBox="0 0 14 16" fill="#fff"><path d="M0 4h2v10c0 .55.45 1 1 1h8c.55 0 1-.45 1-1V4h2c.55 0 .83-.67.44-1.06L11.27.47c-.18-.18-.43-.29-.7-.29H3.43c-.27 0-.52.11-.7.29L.56 2.94C.17 3.33.45 4 1 4zm4 0v8h2V4H4zm4 0v8h2V4H8zM2 4V2.5L3.5.5h7L12 2.5V4H2z"/></svg>
+      </div>
+      <div class="basket-float__info">
+        <span class="basket-float__label">Мой заказ</span>
+        <span class="basket-float__price" id="basket-float-price">0 ₽</span>
+      </div>
+    </div>
+
+    <!-- SCROLL TO TOP -->
+    <button class="back-widget" id="back-widget" aria-label="Наверх">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="#1C1C1C"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+    </button>
+
+    <!-- DELIVERY & PICKUP INFO -->
+    <section class="info-section" id="delivery-info-section">
+      <div class="info-section__inner">
+        <h2 class="info-section__title">Доставка и самовывоз</h2>
+        <div class="info-section__grid">
+          <div class="info-card">
+            <div class="info-card__icon">🚗</div>
+            <h3 class="info-card__title">Доставка курьером</h3>
+            <ul class="info-card__list">
+              <li>Минимальный заказ: 1 199 ₽</li>
+              <li>Стоимость доставки: 149 ₽</li>
+              <li>Время доставки: 60 минут</li>
+              <li>Оплата: карта, СберPay, бонусы</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <div class="info-card__icon">🏪</div>
+            <h3 class="info-card__title">Самовывоз</h3>
+            <ul class="info-card__list">
+              <li>Бесплатно</li>
+              <li>Время подготовки: 20 минут</li>
+              <li>Адрес: проспект Ленина, 113</li>
+              <li>Оплата: карта, СберPay, бонусы</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOYALTY -->
+    <section class="loyalty" id="loyalty">
+      <div class="loyalty__inner">
+        <h2 class="loyalty__title">Программа лояльности</h2>
+        <p class="loyalty__subtitle">Накапливайте бонусы и получайте кэшбэк до 15%</p>
+        <div class="loyalty__grid" id="loyalty-grid"></div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+      <div class="faq__inner">
+        <h2 class="faq__title">Частые вопросы</h2>
+        <div class="faq__list" id="faq-list"></div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="app-banner">
+          <div class="app-banner__content">
+            <h3 class="app-banner__title">Скачивайте приложение Кафе</h3>
+            <div class="app-banner__features">
+              <span>Быстрая оплата</span>
+              <span>Уведомления о заказе</span>
+              <span>Карта лояльности</span>
+            </div>
+            <div class="app-banner__buttons">
+              <a href="https://apps.apple.com/us/app/кафе-здрасте/id1498030871" class="app-banner__btn" target="_blank">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="#fff"><path d="M15.5 10.5c0-1.8 1.5-2.7 1.6-2.7-.9-1.3-2.2-1.4-2.7-1.5-1.1-.1-2.2.7-2.8.7s-1.4-.7-2.3-.6c-1.2.1-2.3.7-2.9 1.8-1.2 2.2-.3 5.4.9 7.2.6.9 1.3 1.8 2.2 1.8.9 0 1.2-.6 2.3-.6s1.4.6 2.3.6 1.5-.9 2.1-1.8c.7-1 1-2 1-2.1-.1 0-1.9-.7-1.9-2.9zm-1.8-5.4c.5-.6.9-1.5.8-2.4-.8 0-1.7.5-2.3 1.1-.5.5-.9 1.4-.8 2.3.9.1 1.7-.4 2.3-1z"/></svg>
+                App Store
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=ru.dolinger.zdraste" class="app-banner__btn" target="_blank">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="#fff"><path d="M1 3.5l7.5 6.5L1 16.5V3.5zm1.5.8v11.4l6.5-5.7L2.5 4.3zm8.5 5.7l2 1.7-2 1.7-2-1.7 2-1.7zm.5-.5l3 2.6-3 2.6-2.5-2.2 2.5-3z"/></svg>
+                Google Play
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__top">
+          <div>
+            <div class="footer__brand">Кафе</div>
+            <p class="footer__brand-desc">Сеть уютных кофеен с авторской кухней рядом с домом.</p>
+            <div class="footer__socials">
+              <a href="https://t.me/zdrastecafe" class="footer__social" aria-label="Telegram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
+              </a>
+              <a href="https://vk.com/zdrastecoffeebar" class="footer__social" aria-label="VK">
+                <svg width="20" height="20" viewBox="0 0 32 32" fill="#fff"><path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.408 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.864-.525-2.05-1.727-1.033-1-1.49-1.135-1.744-1.135-.356 0-.458.102-.458.593v1.575c0 .424-.135.678-1.253.678-1.846 0-3.896-1.12-5.335-3.202-2.168-3.06-2.763-5.335-2.763-5.814 0-.254.102-.491.593-.491h1.744c.44 0 .61.203.78.678.864 2.5 2.303 4.686 2.896 4.896.22 0 .322-.102.322-.66V9.721c-.068-1.186-.695-1.287-.695-1.71 0-.204.17-.407.44-.407h2.744c.373 0 .508.203.508.644v3.473c0 .372.17.508.271.508.22 0 .407-.136.813-.542 1.253-1.405 2.15-3.574 2.15-3.574.119-.254.322-.491.763-.491h1.744c.525 0 .644.27.525.644-.22 1.017-2.354 4.031-2.354 4.031-.186.305-.254.44 0 .78.186.254.796.78 1.203 1.253.745.847 1.32 1.558 1.473 2.05.17.49-.085.744-.576.744z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div>
+            <div class="footer__section-title">Контакты</div>
+            <div class="footer__contact">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#C38C7F"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              <span>проспект Ленина, 113</span>
+            </div>
+            <div class="footer__contact">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#C38C7F"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              <a href="tel:+79663880008">+7 (966) 388-00-08</a>
+            </div>
+            <div class="footer__contact">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#C38C7F"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+              <span>Сегодня: 9:00 – 21:00</span>
+            </div>
+          </div>
+          <div>
+            <div class="footer__section-title">Информация</div>
+            <a href="#faq" class="footer__link">Частые вопросы</a>
+            <a href="#loyalty" class="footer__link">Программа лояльности</a>
+            <a href="#" class="footer__link">Меню КБЖУ</a>
+            <a href="#" class="footer__link">Оплата заказа</a>
+            <a href="#" class="footer__link">Публичная оферта</a>
+            <a href="#" class="footer__link">Политика конфиденциальности</a>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__legal">© 2026 Кафе</div>
+          <div class="footer__payments">
+            <div class="footer__pay-icon">VISA</div>
+            <div class="footer__pay-icon">MC</div>
+            <div class="footer__pay-icon">МИР</div>
+            <div class="footer__pay-icon">СБЕР</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div><!-- /page-wrapper -->
+  <!-- ========== END PAGE WRAPPER ========== -->
+
+  <!-- OVERLAY (outside page-wrapper, stays in viewport) -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- SIDEBAR BASKET (outside page-wrapper, stays in viewport) -->
+  <aside class="sidebar-basket" id="sidebar-basket">
+    <div class="sidebar-basket__header">
+      <h2 class="sidebar-basket__title">Мой заказ</h2>
+      <button class="sidebar-basket__close" id="basket-close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(28,28,28,0.6)" stroke-width="1.8" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="sidebar-basket__items" id="basket-items"></div>
+    <div class="sidebar-basket__footer">
+      <div class="sidebar-basket__promo">
+        <input type="text" class="sidebar-basket__promo-input" placeholder="Промокод" id="promo-input">
+        <button class="sidebar-basket__promo-btn" id="promo-btn">Применить</button>
+      </div>
+      <div class="sidebar-basket__cutlery">
+        <span>Приборы</span>
+        <div class="sidebar-basket__cutlery-ctrl">
+          <button class="sidebar-basket__cutlery-btn" id="cutlery-minus">−</button>
+          <span class="sidebar-basket__cutlery-val" id="cutlery-value">1</span>
+          <button class="sidebar-basket__cutlery-btn" id="cutlery-plus">+</button>
+        </div>
+      </div>
+      <div class="sidebar-basket__total">
+        <span>Итого</span>
+        <span class="sidebar-basket__total-value" id="basket-total">0 ₽</span>
+      </div>
+      <button class="sidebar-basket__checkout" id="checkout-btn">Оформить заказ</button>
+    </div>
+  </aside>
+
+  <!-- PRODUCT POPUP (outside page-wrapper) -->
+  <div class="product-popup" id="product-popup">
+    <div class="product-popup__content">
+      <button class="product-popup__close" id="popup-close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(28,28,28,0.6)" stroke-width="1.8" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="product-popup__img" id="popup-img"></div>
+      <div class="product-popup__body">
+        <h2 class="product-popup__title" id="popup-title"></h2>
+        <p class="product-popup__desc" id="popup-desc"></p>
+        <div class="product-popup__weight" id="popup-weight"></div>
+        <div class="product-popup__nutrients" id="popup-nutrients"></div>
+        <div class="product-popup__footer">
+          <span class="product-popup__price" id="popup-price"></span>
+          <button class="product-popup__add" id="popup-add">Добавить в корзину</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOGIN MODAL (outside page-wrapper) -->
+  <div class="modal" id="login-modal">
+    <div class="modal__content">
+      <button class="modal__close" id="modal-close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(28,28,28,0.6)" stroke-width="1.8" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <h2 class="modal__title">Вход</h2>
+      <p class="modal__subtitle">Введите номер телефона для входа</p>
+      <input type="tel" class="modal__input" placeholder="+7 (___) ___-__-__" id="phone-input">
+      <button class="modal__btn" id="login-submit">Получить код</button>
+    </div>
+  </div>
+
+  <script src="js/menu.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
