@@ -442,6 +442,27 @@ body.basket-open .header {
 }
 .cart-item__remove:hover { text-decoration: underline; }
 
+.sidebar-basket__delivery {
+  padding: 16px 24px; border-top: 1px solid var(--interactive-secondary);
+}
+.sidebar-basket__delivery-title {
+  font-size: 14px; font-weight: 700; margin-bottom: 12px;
+}
+.sidebar-basket__delivery-grid {
+  display: flex; flex-direction: column; gap: 12px;
+}
+.sidebar-basket__delivery-card {
+  background: var(--interactive-secondary); border-radius: var(--radius-card); padding: 12px;
+}
+.sidebar-basket__delivery-icon { font-size: 20px; margin-bottom: 6px; }
+.sidebar-basket__delivery-card-title {
+  font-size: 13px; font-weight: 600; margin-bottom: 6px;
+}
+.sidebar-basket__delivery-list {
+  font-size: 12px; color: var(--text-secondary);
+}
+.sidebar-basket__delivery-list li { margin-bottom: 2px; }
+
 .sidebar-basket__footer { padding: 20px 24px; border-top: 1px solid var(--interactive-secondary); }
 
 .sidebar-basket__promo {
