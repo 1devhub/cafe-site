@@ -75,11 +75,13 @@
   });
 
   // Delivery/Pickup tabs
+  const tabsContainer = document.querySelector('.sidebar-basket__tabs');
   const tabs = document.querySelectorAll('.sidebar-basket__tab');
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
       tabs.forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
+      tabsContainer.dataset.active = tab.dataset.tab;
     });
   });
 
